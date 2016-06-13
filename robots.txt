@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Host: speedpapper.github.io
+Sitemap: http://speedpapper.github.io/sitemap.xml

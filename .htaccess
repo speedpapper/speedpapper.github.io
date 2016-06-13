@@ -1,0 +1,10 @@
+AddType application/x-httpd-php .xml .html
+AddDefaultCharset WINDOWS-1251
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/tpl%{REQUEST_URI} -f
+RewriteRule .* tpl/$0 [L,QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . / [L,R=301]
+RewriteCond %{HTTP_HOST} ^www\.(.+) [NC]
+RewriteRule .* http://%1/$0 [L,R=301]
